@@ -4,99 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Cafe</title>
-
-    
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <nav class="navbar">
-
-        <div class="logo">
-            ☕ Coffee Cafe
-        </div>
-
-        <!-- Mobile Menu Button -->
+    <nav class="navbar"nav>
+        <div class="logo"> ☕ Coffee Cafe </div>
         <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"></label>
 
-        <label for="menu-toggle" class="menu-icon">
-            ☰
-        </label>
+        <div class="logo">Coffee Cafe </div>
+        
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
 
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+
+        </div>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to coffee Cafe</h1>
+    
+            <p>
+                Fresh coffee, delicious flavors and a comfortable
+                place to enjoy your favorite drink.
+            </p>
+
+            <button id="specialBtn">
+                Show Today's Special
+            </button>
+
+            <p id="specialText"></p>
+
         </div>
 
-    </nav>
+    </section>
 
-    <main class="content">
+    <section id="menu" class="menu-section">
+    <h2>Our Coffee Menu</h2>
 
-        <h1>Welcome to Coffee Cafe</h1>
-
-        <p>
-            Enjoy fresh coffee in a warm and comfortable environment.
+        <p class="section-text">
+            Choose your favorite coffee and enjoy a fresh cup.
         </p>
 
 
-        <div class="coffee-layout">
+        <div class="coffee-grid">
 
-            <div class="coffee-box">
+            
+            <div class="coffee-card">
 
                 <img
                     src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
-                    alt="Hot Coffee"
-                >
+                    alt="Hot Coffee">
 
-                <h2>Hot Coffee</h2>
+                <h3>Hot Coffee</h3>
 
                 <p>
-                    Freshly brewed coffee for coffee lovers.
+                    Freshly brewed coffee with a rich and delicious taste.
                 </p>
+
+                <button class="coffeeBtn"
+                    data-title="Hot Coffee"
+                    data-description="Freshly brewed coffee with a rich and delicious taste.">
+                    Select Coffee
+                </button>
 
             </div>
 
- 
-            <div class="coffee-box">
+            <div class="coffee-card">
 
                 <img
                     src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80"
-                    alt="Cappuccino"
-                >
+                    alt="Cappuccino">
 
-                <h2>Cappuccino</h2>
+                <h3>Cappuccino</h3>
 
                 <p>
-                    Rich espresso with creamy milk foam.
+                    Espresso combined with smooth and creamy milk foam.
                 </p>
+
+                <button class="coffeeBtn"
+                    data-title="Cappuccino"
+                    data-description="Espresso combined with smooth and creamy milk foam.">
+                    Select Coffee
+                </button>
 
             </div>
 
 
-            
-            <div class="coffee-box">
+            <div class="coffee-card">
 
                 <img
                     src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
-                    alt="Iced Coffee"
-                >
+                    alt="Iced Coffee">
 
-                <h2>Iced Coffee</h2>
+                <h3>Iced Coffee</h3>
 
                 <p>
-                    Refreshing cold coffee served with ice.
+                    A refreshing cold coffee served with ice.
                 </p>
+
+                <button class="coffeeBtn"
+                    data-title="Iced Coffee"
+                    data-description="A refreshing cold coffee served with ice.">
+                    Select Coffee
+                </button>
 
             </div>
 
         </div>
 
-    </main>
+
+        <div class="selected-coffee">
+
+            <h2 id="selectedTitle">
+                Select a Coffee
+            </h2>
+
+            <p id="selectedDescription">
+                Click any coffee button to see its details here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="about" class="about-section">
+
+        <h2>About Coffee Cafe</h2>
+
+        <p>
+            Coffee Cafe is a simple and welcoming place for
+            coffee lovers. We serve fresh and delicious coffee
+            in a comfortable environment.
+        </p>
+
+    </section>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
-
-
