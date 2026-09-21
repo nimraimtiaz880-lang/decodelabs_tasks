@@ -1,0 +1,210 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f3ef;
+    color: #3b2418;
+}
+.navbar {
+    background-color: #3b2418;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #d9a066;
+}
+
+
+ #menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 60px 30px;
+
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.content > p {
+    color: #6b5548;
+    margin-bottom: 40px;
+}
+
+ .coffee-layout {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.coffee-box {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+ 
+.coffee-box img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    margin-bottom: 20px;
+}
+
+
+.coffee-box h2 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.coffee-box p {
+    color: #6b5548;
+
+    line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+
+    .coffee-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+
+    .navbar {
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+    }
+ 
+    .menu-icon {
+        display: block;
+    }
+ 
+    .nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 0;
+
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        padding: 12px;
+
+        border-top: 1px solid #5a4032;
+    }
+
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+
+    .content {
+        padding: 40px 20px;
+    }
+
+    .content h1 {
+        font-size: 32px;
+    }
+
+    .content > p {
+        margin-bottom: 30px;
+    }
+
+
+
+    .coffee-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    .coffee-box img {
+        height: 230px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .coffee-box img {
+        height: 200px;
+    }
+
+}
+ 
+
